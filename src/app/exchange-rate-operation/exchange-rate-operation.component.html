@@ -1,0 +1,24 @@
+<form (ngSubmit)="calculate()" novalidate autocomplete="off">
+  <p>
+    <label for="origen">Moneda origen: </label>
+    <input id="origen" [(ngModel)]="request.origen" name="origen">
+  </p>
+  <p>
+    <label for="destino">Moneda destino: </label>
+    <input id="destino" [(ngModel)]="request.destino" name="destino">
+  </p>
+  <p>
+    <label for="monto">Monto: </label>
+    <input type="number" id="monto" [(ngModel)]="request.monto" name="monto">
+  </p>
+  <button>Calcular</button>
+</form>
+<div *ngIf="response.amount">
+  <span>
+    {{ response.request.amount | number:'1.2-2' }} {{ response.request.sourceCurrency }}
+    =
+    {{ response.amount | number:'1.2-2' }} {{ response.request.targetCurrency }}
+    al tipo de cambio
+    {{ response.rate | number:'1.5-5' }}
+  </span>
+</div>

@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Origen</td>
+      <td>Destino</td>
+      <td>Tipo de cambio</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of rates">
+      <td>{{ item.id }}</td>
+      <td>{{ item.sourceCurrency }}</td>
+      <td>{{ item.targetCurrency }}</td>
+      <td>{{ item.rate | number:'1.5-5' }}</td>
+    </tr>
+  </tbody>
+</table>

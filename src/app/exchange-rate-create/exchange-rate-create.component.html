@@ -1,0 +1,15 @@
+<form (ngSubmit)="save()" novalidate autocomplete="off">
+  <p>
+    <label for="origen">Moneda origen: </label>
+    <input id="origen" [(ngModel)]="request.origen" name="origen">
+  </p>
+  <p>
+    <label for="destino">Moneda destino: </label>
+    <input id="destino" [(ngModel)]="request.destino" name="destino">
+  </p>
+  <p>
+    <label for="monto">Tipo de cambio: </label>
+    <input type="number" id="monto" [(ngModel)]="request.tipoDeCambio" name="tipoDeCambio">
+  </p>
+  <button>Guardar</button>
+</form>
